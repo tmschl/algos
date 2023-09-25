@@ -2,9 +2,6 @@ let array = [5,2,4,6,1,3]
 
 function insertionSort(A) {
   console.log(A);
-  i = 0;
-
-
   // this iterates through the given array
   for (i = 0; i < A.length; i++) {
     let key = A[i];
@@ -27,6 +24,21 @@ function insertionSort(A) {
 insertionSort(array);
 
 
-function invertedInsertionSort() {
-  
+function invertedInsertionSort(A) {
+  console.log(A)
+  for (i = A.length - 1; i >= 0; i--) {
+    let key = A[i];
+    let j = i + 1; 
+
+    while ( j < A.length && A[j] > key) {
+      console.log(j, A[j]);
+      A[j-1] = A[j];
+      j = j + 1;
+    }
+    A[j - 1 ] = key;
+  }
+
+  console.log(A);
 }
+
+invertedInsertionSort(array);
