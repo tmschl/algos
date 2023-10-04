@@ -1,24 +1,17 @@
-let array = [5,2,4,6,1,3]
+let array = [5,2,4,6,1,3,99,23,4,3,1,532,4234,2,432,4,2,1,1,1,1,324,2,432,33333333,0, -4]
 
-function insertionSort(A) {
-  console.log(A);
-  // this iterates through the given array
-  for (i = 0; i < A.length; i++) {
-    let key = A[i];
+
+function insertionSort (arr, n) {
+  for (let i = 0; i < arr.length; i++) {
+    let key = arr[i];
     let j = i - 1;
-    
-    // this iterates through current cards
-    // compare the current old card in hand to current card just picked up
-    // if old card bigger, push it right one position
-    // go back one in hand and check again
-    while (j >= 0 && A[j] > key) {
-      A[j+1] = A[j];
+    while (j >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j];
       j = j - 1;
     }
-    A[j + 1] = key;
+    arr[j + 1] = key;
+    console.log(arr);
   }
-
-  console.log(A);
 }
 
 insertionSort(array);
