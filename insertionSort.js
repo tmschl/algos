@@ -2,6 +2,7 @@ let array = [5,2,4,6,1,3,99,23,4,3,1,532,4234,2,432,4,2,1,1,1,1,324,2,432,333333
 
 
 function insertionSort (arr, n) {
+  // initialization, termination & maintenance (induction and base case)
   for (let i = 0; i < n; i++) {
     let key = arr[i];
     let j = i - 1;
@@ -32,3 +33,8 @@ function invertedInsertionSort(A) {
 }
 
 invertedInsertionSort(array);
+
+
+// pseudo linear search
+// arr to n; find x
+// . if arr[i] === x return arr[i]
